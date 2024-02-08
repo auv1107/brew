@@ -42,10 +42,10 @@ A cask should be disabled to indicate to users that the cask cannot be used and 
 The most common reasons for disabling a cask are:
 
 - it cannot be installed
-- it has been deprecated for a long time
-- the upstream URL has been removed
+- it has been deprecated in Homebrew for at least six months
+- the upstream URL has been removed or uses archive.org
 
-Popular casks (i.e. have more than 999 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/cask-install/30d/)) should not be disabled without a deprecation period of at least six months even if e.g. they do not install on all macOS versions.
+Popular casks (i.e. have more than 999 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/cask-install/30d/)) should be deprecated for at least six months even if e.g. they do not install on all macOS versions before being disabled.
 
 Unpopular casks (i.e. have fewer than 1000 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/cask-install/30d/)) can be deprecated immediately for any of the reasons above e.g. they cannot be installed.
 
@@ -90,7 +90,7 @@ deprecate! date: "2020-01-01", because: :deprecated_upstream
 
 ```ruby
 # Error: <cask> has been disabled because it does not build!
-disable! date: "2020-01-01", because: :does_not_build
+disable! date: "2020-01-01", because: :deprecated_upstream
 ```
 
 If these pre-existing reasons do not fit, a custom reason can be specified. Such reasons should be written to fit into the sentence `<cask> has been deprecated/disabled because it <reason>!`.

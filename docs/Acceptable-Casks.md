@@ -88,7 +88,7 @@ Note that none of these exceptions is a guarantee for inclusion, but examples of
 We will not add new casks using forks unless at least one of the following is true:
 
 * the fork has been "blessed" (i.e. pointed to by the original source repository and noted as the official successor)
-* the fork has been used as the replacement by at least two other major distributions (e.g. Ubuntu, Debian, not Some Random Linux Distro Nobody Uses)
+* the fork has been used as the replacement by at least two other major distributions (e.g. Ubuntu, Fedora, Arch Linux, not Some Random Linux Distro Nobody Uses)
 
 The fork must still meet all the other acceptable casks requirements (including those of e.g. popularity and self-submission).
 

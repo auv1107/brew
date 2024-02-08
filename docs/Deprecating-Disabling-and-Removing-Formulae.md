@@ -18,12 +18,12 @@ A formula should be deprecated to indicate to users that the formula should not 
 
 The most common reasons for deprecation are when the upstream project is deprecated, unmaintained, or archived.
 
-Formulae should only be be deprecated if at least one of the following are true:
+Formulae should only be be deprecated if at least one of the following is true:
 
 - the formula does not build on any of our supported macOS versions and on Linux
 - the formula has outstanding CVEs
 
-Formulae with dependents should not be deprecated until or when all dependents are also deprecated.
+Formulae with dependents cannot not be deprecated until or when all dependents are also deprecated.
 
 To deprecate a formula, add a `deprecate!` call. This call should include a deprecation date (in the ISO 8601 format) and a deprecation reason:
 
@@ -48,7 +48,7 @@ The most common reasons for disabling a formula are:
 - the upstream repository has been removed
 - the project has no license
 
-Popular formulae (i.e. have more than 999 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/install/30d/)) should not be disabled without a deprecation period of at least six months even if e.g. they do not build from source and do not have a license.
+Popular formulae (i.e. have more than 999 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/install/30d/)) should be deprecated for at least six months even if e.g. they do not build from source and do not have a license before being disabled.
 
 Unpopular formulae (i.e. have fewer than 1000 [analytics installs in the last 30 days](https://formulae.brew.sh/analytics/install/30d/)) can be deprecated immediately for any of the reasons above e.g. they cannot be built from source on any supported macOS version or Linux.
 
